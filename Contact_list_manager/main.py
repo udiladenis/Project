@@ -1,15 +1,11 @@
 import json
 from functions import verify_phone_number, verify_email_address, read_contacts, write_contacts, get_contact_by_name
 
-
+# Must provide path for the functions that require this parameter.
 CONTACT_FILE_PATH = "contacte.json"
 
-def write_contacts(file_path, contacts):
-    with open(file_path, 'w') as f:
-        contacts = {"contacts": contacts}
-        json.dump(contacts, f)
-
-
+# Define a function that will take these inputs from user and check every item
+# Use "strip()" just in case you enter some values with space. This "stip()" will delete all those white spaces 
 def add_contact(contacts: list):
     first_name = input("First Name: ").lower().strip()
     last_name = input("Last Name: ").lower().strip()
@@ -18,6 +14,7 @@ def add_contact(contacts: list):
     email = input("Email Address: ").strip()
     address = input("Address: ").strip()
 
+    # use functions from "functions".py" file for validation
     if not first_name or not last_name:
         print("Contact must have a first and last name.")
     elif mobile and not verify_phone_number(mobile):
@@ -35,7 +32,7 @@ def add_contact(contacts: list):
     return
     print("You entered invalid information. This contact is not added")
 
-
+# Delete contact by first and last name
 def del_contact_by_name(contacts):
     first_name = input("First name: ").strip()
     last_name = input("Last name: ").strip()
@@ -50,6 +47,7 @@ def del_contact_by_name(contacts):
             print("Contact deleted!")
 
 
+# Get information about contacts just from those fileds that are not empty
 def get_contact_string(contact):
     string = f'{contact["First Name"].capitalize()} {contact["Last Name"].capitalize()}'
 
@@ -62,7 +60,7 @@ def get_contact_string(contact):
 
     return string
 
-
+# Get a list of all contacts
 def list_contacts(contacts):
     sorted_contacts = sorted(contacts, key=lambda x: x['First Name'])
 
@@ -83,7 +81,7 @@ def main(contacts_path):
 contacts = read_contacts("contacte.json")
 while True:
     inpt = input("\nType a comman: ")
-    if inpt == "q":
+    if inpt == "q": # The new contacts will be saved only if the user will type "q"
         write_contacts("contacte.json", contacts)
         print("Contacts were succesfully saved!")
         break
