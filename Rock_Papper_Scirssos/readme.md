@@ -1,0 +1,2 @@
+In this project, my main goal was to emulate the old one "Rock paper scissors" game. This console app is easy to use and it works based on user input. The user will input his choice from list("rock, paper, scissors"). In this project, for the opponent choice I choose to use the random library and assign a random value from list of choices to a new variable.
+Based on the options of the user and his opponent, the programm will provide the winner.
