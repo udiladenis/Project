@@ -1,14 +1,14 @@
 import random
 
-
 def joc(x: list):
-    y = str(input("Choose from list {}: ".format(x)))
+    y = str(input("Choose from list {}: ".format(x))) # list with elements "rock, paper, scissor"
     w = y
-    z = random.choice(x)
+    z = random.choice(x) # the opponent(computer) will get some rangom value from list of elemetns
     rez = None
     if y not in x:
         print("Invalid input!")
 
+        # in this portion we specify sitations type of winning
     if w == z:
         result = "Remiza"
         rez = ("\nJucatorul 1 a ales {}, \nJucatorul 2 a ales {}. \n\nRezultat: {}".format(w, z, result))
