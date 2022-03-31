@@ -1,0 +1,4 @@
+This project come in our help because today we may have a bunch of accounts with differents passwords and maybe we need some of those passwords to be in a singe place and be mannageble. The console app is a simple one and is based on user inputs for different task,
+In the beggining, a menu will appear with choices like "add data" that let user to add new account and a new password, "show passwords" that print out the password for a certain account and "quit" that will close the app. 
+Python provides some file management like reading, writing, append text to files so I structured this to have "Adrese.txt" that will have the accounts and "Parole.txt" that will have the passwords.
+Also I added and a file named "Functions.py" taht will handle the main functions that this programm will use. On the "main.py" file, I jsut imported the "Functions.py" file and added OOP just for making the code more easy to be readed. 
