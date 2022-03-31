@@ -1,9 +1,13 @@
 import random
 import os
-lst = ["yes", "y"]
-list = ["aluna", "bicicleta", "trotineta"]
+
+lst = ["yes", "y"] # List for answer
+list = ["aluna", "bicicleta", "trotineta"] # list with words (Picked some random words that came to my minde :))
+
+# Check if the user wants to play this game
 rasp = input("Hello fella! Do you wanna play a game?: ")
-if rasp.lower() in lst:
+
+if rasp.lower() in lst: # check if the answare is in our list with valid answers
     print("Welcome to our game Fella!")
     print("In this game you should pick an item from a given list. You will play against the computer! He will also pick an item from that list and what u need to do is to guess which was the computer selected item!")
     print("Rules: ")
@@ -13,8 +17,10 @@ if rasp.lower() in lst:
     list = ["aluna", "bicicleta", "trotineta", "nu"]
     random_item = random.choice(list)
     print("\nHere we GO!")
-    nr_of_lifes = 3
-    # Validarea inputului
+    
+    nr_of_lifes = 3 # number of lifes
+    
+    # Input validation
     while True and nr_of_lifes > 0:
         choice = input(f"Please pick in item from this list {list}: ")
         if choice in list:
@@ -28,6 +34,6 @@ if rasp.lower() in lst:
             print("Please pick an item that exists in list!")
             choice = input(f"Pick item from this list {list}: ")
     else:
-        print("It seems that you just run ouf of lifes")
+        print("It seems that you just run ouf of lifes") # if the user runs out of lifes, the game is over
 else:
     print("Have a nice day! :)")
