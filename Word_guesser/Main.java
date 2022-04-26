@@ -20,8 +20,8 @@ public class Main {
         String answer = obj.nextLine();
        if(answer.equals("Yes") || (answer.equals("Y"))) {
            String[] C = {"memory_management", "pointers", "game_dev"};
-           String[] oop = {"encapsulation", "inheritance", "polymorphism", "abstraction"};
-           String[] python = {"data-science", "AI", "easy language"};
+           String[] OOP = {"encapsulation", "inheritance", "polymorphism", "abstraction"};
+           String[] Python = {"data-science", "AI", "easy language"};
 
            while (true) {
                System.out.println("Please select one of the next: C, OOP, Python");
@@ -58,14 +58,14 @@ public class Main {
                    break;
 
                }
-               else if (choice.equals("oop")) {
+               else if (choice.equals("OOP")) {
                    Random randomizer = new Random();
-                   random = oop[randomizer.nextInt(oop.length)];
+                   random = OOP[randomizer.nextInt(OOP.length)];
 
                    System.out.println("You selected: " + choice);
                    while(true) {
                        System.out.println("Choose a word from the next list: ");
-                       System.out.println(Arrays.toString(oop));
+                       System.out.println(Arrays.toString(OOP));
                        String user_choice = obj.nextLine();
 
                        if (lifes >= 0) {
@@ -88,12 +88,12 @@ public class Main {
                }
                else if (choice.equals("Python")) {
                    Random randomizer = new Random();
-                   random = python[randomizer.nextInt(python.length)];
+                   random = Python[randomizer.nextInt(Python.length)];
 
                    System.out.println("You selected: " + choice);
                    while(true) {
                        System.out.println("Choose a word from the next list: ");
-                       System.out.println(Arrays.toString(python));
+                       System.out.println(Arrays.toString(Python));
                        String user_choice = obj.nextLine();
 
                        if (lifes >= 0) {
