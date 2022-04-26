@@ -1,0 +1,5 @@
+For this application, I choose to use Java because is my new programming language that I am learning right now. For this simple application, I choose to use some specific and basic UX pattern and describe the application in the "start_game_message()" method and make it clear for the user.
+Also in this method are some of the rules for game and make it as clear as possible for the user.
+Short description for game: is a console application and the user will need to choose between 3 different arrays like: C, Python or Oop. All of these contains certain words that are representative for each of them. After the user has choosed the desired list, the programm will choose randomly one word of that array. After that, the game starts and the user will need to guess which word was picked randomly by programm.
+There are only 3 lifes that represent the amount of choices and if the lifes goes bellow 1, a certain message will appear and the game will end.
+Also if the user will not choose from "C, Python, Oop" the programm will display a message like "Unknown field! Please try again!".
